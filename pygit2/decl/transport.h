@@ -36,6 +36,8 @@ typedef int (*git_cred_acquire_cb)(
 	void *payload);
 
 typedef int (*git_transport_cb)(git_transport **out, git_remote *owner, void *param);
+typedef int (*git_url_resolve_cb)(git_buf *url_resolved, const char *url, int direction, void *payload);
+
 int git_cred_username_new(git_cred **cred, const char *username);
 int git_cred_userpass_plaintext_new(
 	git_cred **out,

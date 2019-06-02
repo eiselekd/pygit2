@@ -38,6 +38,7 @@ struct git_remote_callbacks {
 	git_push_negotiation push_negotiation;
 	git_transport_cb transport;
 	void *payload;
+	git_url_resolve_cb resolve_url;
 };
 
 typedef struct {
